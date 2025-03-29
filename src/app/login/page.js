@@ -19,7 +19,7 @@ export default function Login() {
             password: e.target.password.value
         };
 
-        axios.post("http://localhost:5000/api/frontend/users/login", data)
+        axios.post("https://nodejs-login-register.onrender.com/api/frontend/users/login", data)
             .then((result) => {
                 if (result.data.status == true) {
                     toast.success("Login successfully!");

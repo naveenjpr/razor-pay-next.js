@@ -16,7 +16,7 @@ export default function Register() {
             mobile_number: e.target.mobile_number.value,// ✔️ सही
             password: e.target.password.value, // ✔️ सही
         };
-        axios.post("http://localhost:5000/api/frontend/users/register", data).then((result) => {
+        axios.post("https://nodejs-login-register.onrender.com/api/frontend/users/register", data).then((result) => {
             console.log(result.data)
             if (result.data.status == true) {
                 setformSubmit(true)
