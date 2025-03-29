@@ -5,7 +5,7 @@ import { Cookies } from "react-cookie"
 import { toast, ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 
-export default function page() {
+export default function ProfilePage() {
   const [userData, setUserData] = useState(null)
   const cookies = new Cookies()
 
@@ -33,7 +33,7 @@ export default function page() {
         toast.error("Something went wrong!")
         console.error("Profile Fetch Error:", error)
       })
-  }, [])
+  }, [cookies])
   return (
     <div className="max-w-[500px] mx-auto h-screen">
       <h1 className="text-2xl font-bold text-center">My Profile</h1>

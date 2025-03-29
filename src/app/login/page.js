@@ -41,7 +41,7 @@ export default function Login() {
         if (token) {
             router.push("/");
         }
-    }, [tokenvalue]);
+    }, [tokenvalue,router]);
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">

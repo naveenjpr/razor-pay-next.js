@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react"
 import { cartContext } from "../Context/CartContext"
 import { useRazorpay, RazorpayOrderOptions } from "react-razorpay"
 import axios from "axios"
+import Image from "next/image"
 
 export default function Cart() {
   let { cart, setcart } = useContext(cartContext)
@@ -208,10 +209,13 @@ export default function Cart() {
               >
                 {/* Product Image & Details */}
                 <div className="w-full md:w-2/5 flex items-center">
-                  <img
+                  <Image
                     className="h-16 md:h-24 w-auto rounded-md"
                     src={item.thumbnail}
                     alt={item.title}
+                    width={96} // Set an appropriate width
+                    height={96} // Set an appropriate height
+                    layout="intrinsic"
                   />
                   <div className="ml-4">
                     <span className="font-bold text-sm">{item.title}</span>
